@@ -1,0 +1,24 @@
+.top-block {
+	margin-top: 15px;
+	display: grid;
+	height: 411px;
+	grid-template-columns:minmax(0, 390px) minmax(0, 590px) auto;
+	grid-template-rows: repeat(2, 1fr);
+	background-color: var(--lightGreen);
+	gap: 15px;
+
+	&-green {
+	background-color: var(--green);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+		&:before {
+			content: attr(data-count);
+			font-size: 53px;
+		}
+	}
+	&__four {
+		grid-column: 1 / 3;
+	}
+}
